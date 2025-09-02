@@ -38,6 +38,10 @@ public class GroundManager : MonoBehaviour
 
     void Start()
     {
+        // Busca el jugador automáticamente si no está asignado
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+
         ResetGround();
     }
 
