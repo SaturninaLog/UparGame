@@ -1660,6 +1660,7 @@ MonoBehaviour:
   laneDistance: 2
   jumpForce: 8
   gravity: 20
+  fastFallMultiplier: 2.5
   gameOverPanel: {fileID: 821640552}
   gameOverText: {fileID: 1636572235}
   restartButton: {fileID: 1861520196}
