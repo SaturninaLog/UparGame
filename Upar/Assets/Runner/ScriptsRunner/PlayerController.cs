@@ -21,6 +21,14 @@ public class PlayerController : MonoBehaviour
 
     private bool isDead = false;
 
+    [Header("Slide / Agacharse")]
+    public float slideDuration = 1f;             // Cuánto dura agachado
+    public float slideHeight = 0.5f;             // Altura mientras se agacha
+    private float originalHeight;
+    private Vector3 originalCenter;
+    private bool isSliding = false;
+    private float slideTimer = 0f;
+
     [Header("UI Game Over")]
     public GameObject gameOverPanel;
     public TMP_Text gameOverText;
@@ -29,6 +37,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        // Guardar tamaño original
+        originalHeight = controller.height;
+        originalCenter = controller.center;
 
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
@@ -58,29 +70,60 @@ public class PlayerController : MonoBehaviour
         float targetX = (currentLane - 1) * laneDistance;
         moveDirection.x = (targetX - transform.position.x) * 10f;
 
-        // Saltar y caer
+        // Saltar
         if (controller.isGrounded)
         {
             verticalVelocity = -1;
+
             if (Input.GetKeyDown(KeyCode.Space))
                 verticalVelocity = jumpForce;
+
+            // Slide: presiona flecha abajo estando en el suelo
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                StartSlide();
+            }
         }
         else
         {
-            // 👇 Aquí la mejora: si presiona flecha abajo, cae más rápido
+            // Caer más rápido en el aire
             if (Input.GetKey(KeyCode.DownArrow))
-            {
                 verticalVelocity -= gravity * fastFallMultiplier * Time.deltaTime;
-            }
             else
-            {
                 verticalVelocity -= gravity * Time.deltaTime;
+        }
+
+        // Si está deslizando, contar tiempo
+        if (isSliding)
+        {
+            slideTimer -= Time.deltaTime;
+            if (slideTimer <= 0f)
+            {
+                EndSlide();
             }
         }
 
         moveDirection.y = verticalVelocity;
 
         controller.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void StartSlide()
+    {
+        if (isSliding) return;
+
+        isSliding = true;
+        slideTimer = slideDuration;
+
+        controller.height = slideHeight;
+        controller.center = new Vector3(controller.center.x, slideHeight / 2f, controller.center.z);
+    }
+
+    private void EndSlide()
+    {
+        isSliding = false;
+        controller.height = originalHeight;
+        controller.center = originalCenter;
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
