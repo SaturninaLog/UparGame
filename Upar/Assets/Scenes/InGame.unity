@@ -156,6 +156,7 @@ Transform:
   - {fileID: 1376901688}
   - {fileID: 2004978474}
   - {fileID: 881534214}
+  - {fileID: 933632987}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &111577942
@@ -465,6 +466,10 @@ MonoBehaviour:
   spawnMarginZ: 5
   obstaclesPerTile: {x: 1, y: 2}
   airObstacleYOffset: 2.5
+  backgroundProps:
+  - {fileID: 4530300322295106060, guid: 93668382a3123214c83bbdcf553bf408, type: 3}
+  backgroundXOffset: 12
+  backgroundY: 0
   difficultyIncrement: 4
 --- !u!1 &313855538
 GameObject:
@@ -1181,14 +1186,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933632986}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.68659, y: -10.281255, z: 1.8694203}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.894746, y: -12.694909, z: -41.944607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1931757339}
   - {fileID: 1023340516}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 79435984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -1296,7 +1301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1589325617}
-  offset: {x: 0, y: 5.88, z: -12.89}
+  offset: {x: 0, y: 4.2, z: -10}
   smoothSpeed: 5
 --- !u!1 &995254796
 GameObject:
@@ -1332,7 +1337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46, y: 333}
+  m_AnchoredPosition: {x: -46, y: 239}
   m_SizeDelta: {x: 1926.063, y: 1926.063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995254798
@@ -3462,7 +3467,6 @@ SceneRoots:
   - {fileID: 1414952534}
   - {fileID: 1589325617}
   - {fileID: 963194228}
-  - {fileID: 933632987}
   - {fileID: 79435984}
   - {fileID: 127002170}
   - {fileID: 1034343301}

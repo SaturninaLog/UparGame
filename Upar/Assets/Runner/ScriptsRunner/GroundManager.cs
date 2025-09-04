@@ -27,9 +27,13 @@ public class GroundManager : MonoBehaviour
     public Vector2 obstaclesPerTile = new Vector2(2, 4);
     public float airObstacleYOffset = 1.5f;
 
+    [Header("Background Props")]
+    public GameObject[] backgroundProps;     // ← Árboles / arbustos
+    public float backgroundXOffset = 12f;    // ← Qué tan lejos del centro
+    public float backgroundY = 0f;           // ← Altura de props
+
     public float difficultyIncrement = 0.01f;
     private int tilesSinceLastSouvenir = 0;
-    // 💡 CAMBIO: Contador para asignar índices únicos a los souvenirs
     private int souvenirCounter = 0;
 
     private readonly List<GameObject> activeTiles = new List<GameObject>();
@@ -38,7 +42,6 @@ public class GroundManager : MonoBehaviour
 
     void Start()
     {
-        // Busca el jugador automáticamente si no está asignado
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -55,7 +58,6 @@ public class GroundManager : MonoBehaviour
         zSpawn = 0f;
         currentSpawnMarginZ = spawnMarginZ;
         tilesSinceLastSouvenir = 0;
-        // 💡 CAMBIO: Reiniciar el contador de souvenirs
         souvenirCounter = 0;
 
         for (int i = 0; i < numberOfTiles; i++)
@@ -90,7 +92,7 @@ public class GroundManager : MonoBehaviour
         }
         GameObject tile = Instantiate(groundPrefab, new Vector3(0f, 0f, zSpawn), Quaternion.identity);
         activeTiles.Add(tile);
-        SpawnContentOnTile(zSpawn);
+        SpawnContentOnTile(tile, zSpawn);
         zSpawn += groundLength;
         tilesSinceLastSouvenir++;
     }
@@ -104,11 +106,11 @@ public class GroundManager : MonoBehaviour
         }
     }
 
-    private void SpawnContentOnTile(float tileZStart)
+    private void SpawnContentOnTile(GameObject parentTile, float tileZStart)
     {
+        // 🟢 Souvenir
         if (tilesSinceLastSouvenir >= souvenirSpawnInterval && souvenirPrefabs.Length > 0)
         {
-            // 💡 CAMBIO: Usamos el contador para obtener el índice del souvenir
             int souvenirIndex = souvenirCounter % souvenirPrefabs.Length;
             GameObject selectedPrefab = souvenirPrefabs[souvenirIndex];
             if (selectedPrefab == null)
@@ -119,59 +121,73 @@ public class GroundManager : MonoBehaviour
             GameObject souvenirInstance = Instantiate(selectedPrefab);
             souvenirInstance.transform.position = new Vector3(Random.Range(-1, 2) * laneDistance, collectibleYOffset, tileZStart + Random.Range(currentSpawnMarginZ, groundLength - currentSpawnMarginZ));
 
-            Souvenir souvenirScript = souvenirInstance.GetComponent<Souvenir>();
-            if (souvenirScript != null)
-            {
-                // 💡 CAMBIO: Esta línea fue eliminada. El GameManager se encarga de la lógica.
-                // Ya no necesitamos asignar un índice al script Souvenir.
-            }
+            souvenirInstance.transform.SetParent(parentTile.transform); // ← hijo del tile
             tilesSinceLastSouvenir = 0;
             return;
         }
 
+        // 🟢 Obstáculos / monedas
         float totalChance = obstacleSpawnChance + coinSpawnChance;
-        if (Random.value > totalChance) return;
-
-        int count = Random.Range((int)obstaclesPerTile.x, (int)obstaclesPerTile.y + 1);
-
-        for (int i = 0; i < count; i++)
+        if (Random.value > totalChance) { /* nada spawnea en este tile */ }
+        else
         {
-            GameObject selectedPrefab;
-            float yPos;
+            int count = Random.Range((int)obstaclesPerTile.x, (int)obstaclesPerTile.y + 1);
 
-            if (Random.value < (coinSpawnChance / totalChance) && coinPrefabs.Length > 0)
+            for (int i = 0; i < count; i++)
             {
-                selectedPrefab = coinPrefabs[Random.Range(0, coinPrefabs.Length)];
-                yPos = collectibleYOffset;
-            }
-            else
-            {
-                bool isAirObstacle = Random.value < 0.5f && airObstaclePrefabs.Length > 0;
+                GameObject selectedPrefab;
+                float yPos;
 
-                if (isAirObstacle)
+                if (Random.value < (coinSpawnChance / totalChance) && coinPrefabs.Length > 0)
                 {
-                    selectedPrefab = airObstaclePrefabs[Random.Range(0, airObstaclePrefabs.Length)];
-                    yPos = airObstacleYOffset;
+                    selectedPrefab = coinPrefabs[Random.Range(0, coinPrefabs.Length)];
+                    yPos = collectibleYOffset;
                 }
                 else
                 {
-                    selectedPrefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
-                    yPos = selectedPrefab.transform.localScale.y * 0.5f;
+                    bool isAirObstacle = Random.value < 0.5f && airObstaclePrefabs.Length > 0;
+
+                    if (isAirObstacle)
+                    {
+                        selectedPrefab = airObstaclePrefabs[Random.Range(0, airObstaclePrefabs.Length)];
+                        yPos = airObstacleYOffset;
+                    }
+                    else
+                    {
+                        selectedPrefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
+                        yPos = selectedPrefab.transform.localScale.y * 0.5f;
+                    }
                 }
+
+                if (selectedPrefab == null)
+                {
+                    Debug.LogError("Prefab de obstáculo o coleccionable no está asignado en el Inspector.");
+                    continue;
+                }
+
+                int lane = Random.Range(0, 3);
+                float xPos = (lane - 1) * laneDistance;
+                float zPos = tileZStart + Random.Range(currentSpawnMarginZ, groundLength - currentSpawnMarginZ);
+
+                Vector3 spawnPos = new Vector3(xPos, yPos, zPos);
+                GameObject obj = Instantiate(selectedPrefab, spawnPos, Quaternion.identity);
+                obj.transform.SetParent(parentTile.transform); // ← hijo del tile
             }
+        }
 
-            if (selectedPrefab == null)
-            {
-                Debug.LogError("Prefab de obstáculo o coleccionable no está asignado en el Inspector.");
-                continue;
-            }
+        // 🟢 Background Props (árboles / arbustos)
+        if (backgroundProps != null && backgroundProps.Length > 0)
+        {
+            float zBase = tileZStart + groundLength * 0.5f; // mitad del tile
 
-            int lane = Random.Range(0, 3);
-            float xPos = (lane - 1) * laneDistance;
-            float zPos = tileZStart + Random.Range(currentSpawnMarginZ, groundLength - currentSpawnMarginZ);
+            GameObject leftPrefab = backgroundProps[Random.Range(0, backgroundProps.Length)];
+            GameObject rightPrefab = backgroundProps[Random.Range(0, backgroundProps.Length)];
 
-            Vector3 spawnPos = new Vector3(xPos, yPos, zPos);
-            Instantiate(selectedPrefab, spawnPos, Quaternion.identity);
+            GameObject leftInstance = Instantiate(leftPrefab, new Vector3(-backgroundXOffset, backgroundY, zBase), leftPrefab.transform.rotation);
+            GameObject rightInstance = Instantiate(rightPrefab, new Vector3(backgroundXOffset, backgroundY, zBase), Quaternion.Euler(0, 180, 0));
+
+            leftInstance.transform.SetParent(parentTile.transform);
+            rightInstance.transform.SetParent(parentTile.transform);
         }
     }
 }
