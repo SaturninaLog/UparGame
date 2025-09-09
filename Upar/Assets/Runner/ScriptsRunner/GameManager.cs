@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     private int itemPieces = 0;
     public int piecesNeeded = 3;
 
+    [Header("Nivel / Progreso")]
+    public int coinsToNextLevel = 50;     // ← monedas necesarias para avanzar
+    public string nextLevelName;          // ← nombre de la siguiente escena
+
     [Header("UI Referencias")]
     public TMP_Text coinText;
     public TMP_Text pieceText;
@@ -32,6 +36,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text multiplierText;         // Asigna en el inspector
 
     public GroundManager groundManager;
+
+    [Header("Fade")]
+    public ScreenFader screenFader;         // ← Asigna en el inspector (el panel de fade con el script ScreenFader)
 
     void Awake()
     {
@@ -86,7 +93,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                multiplierText.text = ""; // Limpia cuando no hay multiplicador activo
+                multiplierText.text = "";
             }
         }
     }
@@ -108,7 +115,6 @@ public class GameManager : MonoBehaviour
         currentMultiplier = 1;
         multiplierTimer = 0f;
 
-        // reacoplar referencias UI si es necesario en la nueva escena
         GameObject coinTextObject = GameObject.Find("CoinText");
         if (coinTextObject != null)
             coinText = coinTextObject.GetComponent<TMP_Text>();
@@ -130,6 +136,12 @@ public class GameManager : MonoBehaviour
         int finalAmount = amount * currentMultiplier * baseCoinValue;
         coins += finalAmount;
         UpdateUI();
+
+        // 🟢 Verifica si ya alcanzó las monedas para pasar de nivel
+        if (coins >= coinsToNextLevel)
+        {
+            GoToNextLevel();
+        }
     }
 
     public void AddItemPiece()
@@ -198,7 +210,28 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
-
-
-
+    // 🟢 Nuevo método para cambiar de nivel con fade
+    private void GoToNextLevel()
+    {
+        Debug.Log("¡Monedas suficientes! Cargando siguiente nivel...");
+        if (!string.IsNullOrEmpty(nextLevelName))
+        {
+            if (screenFader != null)
+            {
+                StartCoroutine(screenFader.FadeOutIn(() =>
+                {
+                    SceneManager.LoadScene(nextLevelName);
+                }));
+            }
+            else
+            {
+                // Si no hay fader, carga directo
+                SceneManager.LoadScene(nextLevelName);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No se configuró el nombre del siguiente nivel en GameManager.");
+        }
+    }
 }
