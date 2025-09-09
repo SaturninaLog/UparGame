@@ -16,29 +16,32 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     public float jumpForce = 8f;
     public float gravity = 20f;
-    public float fastFallMultiplier = 2.5f; // 👈 Velocidad extra al caer
+    public float fastFallMultiplier = 2.5f;
     private float verticalVelocity;
 
     private bool isDead = false;
 
     [Header("Slide / Agacharse")]
-    public float slideDuration = 1f;             // Cuánto dura agachado
-    public float slideHeight = 0.5f;             // Altura mientras se agacha
+    public float slideDuration = 1f;
+    public float slideHeight = 0.5f;
     private float originalHeight;
     private Vector3 originalCenter;
     private bool isSliding = false;
     private float slideTimer = 0f;
+    [SerializeField] private float slideYOffset = 0f; // ajusta en el inspector
 
     [Header("UI Game Over")]
     public GameObject gameOverPanel;
     public TMP_Text gameOverText;
     public Button restartButton;
 
+    [Header("Animaciones")] // 🆕
+    public Animator animator;  // Referencia al Animator
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
 
-        // Guardar tamaño original
         originalHeight = controller.height;
         originalCenter = controller.center;
 
@@ -50,6 +53,9 @@ public class PlayerController : MonoBehaviour
             restartButton.onClick.RemoveAllListeners();
             restartButton.onClick.AddListener(RestartScene);
         }
+
+        if (animator == null) // 🆕 si no se asignó en el inspector
+            animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -76,21 +82,32 @@ public class PlayerController : MonoBehaviour
             verticalVelocity = -1;
 
             if (Input.GetKeyDown(KeyCode.Space))
+            {
                 verticalVelocity = jumpForce;
+                if (animator != null) animator.SetTrigger("Jump"); // 🆕
+            }
 
-            // Slide: presiona flecha abajo estando en el suelo
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 StartSlide();
             }
+
+            // Si estamos en el piso y no estamos deslizando, reproducimos correr
+            if (!isSliding && animator != null)
+            {
+                animator.SetBool("Running", true); // 🆕
+            }
         }
         else
         {
-            // Caer más rápido en el aire
+            // Caer más rápido
             if (Input.GetKey(KeyCode.DownArrow))
                 verticalVelocity -= gravity * fastFallMultiplier * Time.deltaTime;
             else
                 verticalVelocity -= gravity * Time.deltaTime;
+
+            if (animator != null)
+                animator.SetBool("Running", false); // 🆕 detiene la animación de correr
         }
 
         // Si está deslizando, contar tiempo
@@ -115,16 +132,37 @@ public class PlayerController : MonoBehaviour
         isSliding = true;
         slideTimer = slideDuration;
 
+        float bottomBefore = controller.center.y - (controller.height * 0.5f);
+
         controller.height = slideHeight;
-        controller.center = new Vector3(controller.center.x, slideHeight / 2f, controller.center.z);
+
+        controller.center = new Vector3(
+            controller.center.x,
+            bottomBefore + (controller.height * 0.5f) + slideYOffset,
+            controller.center.z
+        );
+
+        if (animator != null)
+        {
+            animator.SetTrigger("Slide");
+            animator.SetBool("Running", false);
+        }
     }
 
     private void EndSlide()
     {
         isSliding = false;
+
         controller.height = originalHeight;
-        controller.center = originalCenter;
+        controller.center = originalCenter; // 👈 asegurarse que vuelve al centro original
+
+        if (animator != null)
+        {
+            animator.SetBool("Running", true);
+        }
     }
+
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -138,6 +176,8 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+
+        if (animator != null) animator.SetTrigger("Die"); // 🆕 animación de muerte
 
         if (gameOverPanel != null)
         {
@@ -162,6 +202,12 @@ public class PlayerController : MonoBehaviour
         transform.position = Vector3.zero;
         verticalVelocity = 0f;
         isDead = false;
+
+        if (animator != null)
+        {
+            animator.SetBool("Running", true); // 🆕 volver a correr
+            animator.ResetTrigger("Die");
+        }
 
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
