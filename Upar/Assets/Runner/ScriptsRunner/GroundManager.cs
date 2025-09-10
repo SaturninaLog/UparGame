@@ -47,6 +47,11 @@ public class GroundManager : MonoBehaviour
     private float zSpawn = 0f;
     private float currentSpawnMarginZ;
 
+    // 🔹 Configuración de separación mínima
+    public float minLaneSeparation = 0.1f;       // para verificar lanes iguales
+    public float minZSeparationGround = 4f;      // separación mínima en Z para obstáculos en el suelo
+    public float minZSeparationAir = 6f;         // separación mínima en Z para obstáculos aéreos
+
     void Start()
     {
         if (player == null)
@@ -131,7 +136,6 @@ public class GroundManager : MonoBehaviour
                     float xPos = lane * laneDistance;
                     float zPos = tileZStart + Random.Range(currentSpawnMarginZ, groundLength - currentSpawnMarginZ);
 
-                    // 🆕 ahora usamos souvenirYOffset
                     souvenirInstance.transform.position = new Vector3(xPos, souvenirYOffset, zPos);
                     souvenirInstance.transform.SetParent(parentTile.transform);
 
@@ -145,6 +149,9 @@ public class GroundManager : MonoBehaviour
         if (Random.value <= totalChance)
         {
             int count = Random.Range((int)obstaclesPerTile.x, (int)obstaclesPerTile.y + 1);
+
+            // 🟢 FIX: evitar obstáculos pegados
+            List<Vector3> usedPositions = new List<Vector3>();
 
             for (int i = 0; i < count; i++)
             {
@@ -173,18 +180,47 @@ public class GroundManager : MonoBehaviour
                 }
 
                 if (selectedPrefab == null)
-                {
-                    Debug.LogError("Prefab de obstáculo o coleccionable no está asignado en el Inspector.");
                     continue;
+
+                Vector3 spawnPos = Vector3.zero;
+                bool valid = false;
+                int safety = 0;
+
+                // Intentar hasta encontrar una posición válida
+                while (!valid && safety < 10)
+                {
+                    int lane = Random.Range(0, 3);
+                    float xPos = (lane - 1) * laneDistance;
+                    float zPos = tileZStart + Random.Range(currentSpawnMarginZ, groundLength - currentSpawnMarginZ);
+
+                    spawnPos = new Vector3(xPos, yPos, zPos);
+                    valid = true;
+
+                    foreach (var used in usedPositions)
+                    {
+                        bool sameLane = Mathf.Abs(used.x - spawnPos.x) < minLaneSeparation;
+
+                        if (sameLane)
+                        {
+                            float minZ = (spawnPos.y > 1.0f) ? minZSeparationAir : minZSeparationGround;
+                            if (Mathf.Abs(used.z - spawnPos.z) < minZ)
+                            {
+                                valid = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    safety++;
                 }
 
-                int lane = Random.Range(0, 3);
-                float xPos = (lane - 1) * laneDistance;
-                float zPos = tileZStart + Random.Range(currentSpawnMarginZ, groundLength - currentSpawnMarginZ);
+                if (valid)
+                {
+                    usedPositions.Add(spawnPos);
 
-                Vector3 spawnPos = new Vector3(xPos, yPos, zPos);
-                GameObject obj = Instantiate(selectedPrefab, spawnPos, Quaternion.identity);
-                obj.transform.SetParent(parentTile.transform);
+                    GameObject obj = Instantiate(selectedPrefab, spawnPos, Quaternion.identity);
+                    obj.transform.SetParent(parentTile.transform);
+                }
             }
         }
 
