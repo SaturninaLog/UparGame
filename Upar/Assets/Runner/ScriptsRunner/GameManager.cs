@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [Header("Nivel / Progreso")]
     public int coinsToNextLevel = 50;
     public string nextLevelName;
+    private bool isLevelTransitioning = false;
 
     [Header("UI Referencias")]
     public TMP_Text coinText;
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("Souvenir UI")]
     public List<Image> souvenirImageDisplays;
     public List<Sprite> souvenirSprites;
-    public Sprite souvenirLockedSprite;   // 🔥 sprite inicial (vacío/bloqueado)
+    public Sprite souvenirLockedSprite;
     private int souvenirsCollected = 0;
 
     [Header("Multiplicador")]
@@ -40,6 +41,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Fade")]
     public ScreenFader screenFader;
+
+    [Header("Jugador")]
+    public bool playerFrozen = false; // 🟢 bandera para congelar al jugador
 
     void Awake()
     {
@@ -58,7 +62,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SetupUIReferences();
-        ClearSouvenirsUI();   // 🟢 limpiar souvenirs al inicio
+        ClearSouvenirsUI();
         UpdateUI();
         if (itemImage != null)
             itemImage.enabled = false;
@@ -104,14 +108,22 @@ public class GameManager : MonoBehaviour
         itemPieces = 0;
         currentMultiplier = 1;
         multiplierTimer = 0f;
+        isLevelTransitioning = false;
+        playerFrozen = false; // 🟢 desbloquear jugador en cada escena
 
         SetupUIReferences();
-        ClearSouvenirsUI();   // 🟢 limpiar souvenirs siempre al cargar escena
+        ClearSouvenirsUI();
+
+        GameObject faderObj = GameObject.Find("ScreenFader");
+        if (faderObj != null)
+            screenFader = faderObj.GetComponent<ScreenFader>();
+        else
+            screenFader = null;
+
         UpdateUI();
         UpdateMultiplierUI();
     }
 
-    // 🟢 Método centralizado para buscar la UI en cada escena
     private void SetupUIReferences()
     {
         GameObject coinTextObject = GameObject.Find("CoinText");
@@ -131,7 +143,6 @@ public class GameManager : MonoBehaviour
             itemImage = itemImageObj.GetComponent<Image>();
     }
 
-    // 🟢 función mejorada para limpiar souvenirs
     private void ClearSouvenirsUI()
     {
         souvenirsCollected = 0;
@@ -146,7 +157,6 @@ public class GameManager : MonoBehaviour
             if (obj != null)
             {
                 Image img = obj.GetComponent<Image>();
-                // 🔥 en vez de null, le ponemos el sprite inicial bloqueado
                 img.sprite = souvenirLockedSprite;
                 img.gameObject.SetActive(true);
                 souvenirImageDisplays.Add(img);
@@ -158,13 +168,15 @@ public class GameManager : MonoBehaviour
 
     public void AddCoin(int amount)
     {
+        if (isLevelTransitioning) return;
+
         int finalAmount = amount * currentMultiplier * baseCoinValue;
         coins += finalAmount;
         UpdateUI();
 
         if (coins >= coinsToNextLevel)
         {
-            GoToNextLevel();
+            PausePlayerAndGoToNextLevel();
         }
     }
 
@@ -222,7 +234,7 @@ public class GameManager : MonoBehaviour
         coins = 0;
         currentMultiplier = 1;
         multiplierTimer = 0f;
-        ClearSouvenirsUI();   // 🟢 limpiar souvenirs al reiniciar
+        ClearSouvenirsUI();
         UpdateUI();
         UpdateMultiplierUI();
     }
@@ -232,21 +244,46 @@ public class GameManager : MonoBehaviour
         coins = 0;
         currentMultiplier = 1;
         multiplierTimer = 0f;
-        ClearSouvenirsUI();   // 🟢 limpiar souvenirs también aquí
+        ClearSouvenirsUI();
         UpdateUI();
     }
 
-    private void GoToNextLevel()
+    // 🟢 congelar solo al jugador y detenerlo completamente
+    public void PausePlayerAndGoToNextLevel()
     {
-        Debug.Log("¡Monedas suficientes! Cargando siguiente nivel...");
+        if (isLevelTransitioning) return;
+
+        isLevelTransitioning = true;
+        playerFrozen = true; // ❌ jugador queda quieto
+
+        // Intento de detener al jugador suavemente
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            player.forwardSpeed = 0f;
+            player.verticalVelocity = 0f;
+        }
+
+        Debug.Log("¡Monedas suficientes! Preparando transición al siguiente nivel...");
+
+        StartCoroutine(LoadNextLevelWithDelay(1f));
+    }
+
+    private System.Collections.IEnumerator LoadNextLevelWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // ❌ no desbloquear al jugador antes de cargar la siguiente escena
+        // playerFrozen = false;
+
         if (!string.IsNullOrEmpty(nextLevelName))
         {
             if (screenFader != null)
             {
-                StartCoroutine(screenFader.FadeOutIn(() =>
+                yield return screenFader.FadeOutIn(() =>
                 {
                     SceneManager.LoadScene(nextLevelName);
-                }));
+                });
             }
             else
             {
