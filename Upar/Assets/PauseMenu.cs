@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        AudioManager.instance.PlayFX(AudioManager.instance.pauseButtonFX);
         pausePanel.SetActive(true);  // Activa el panel
         Time.timeScale = 0f;         // Pausa el juego
         isPaused = true;
