@@ -176,6 +176,7 @@ public class GameManager : MonoBehaviour
 
         if (coins >= coinsToNextLevel)
         {
+            AudioManager.instance.PlayFX(AudioManager.instance.coinCollectedFX);
             PausePlayerAndGoToNextLevel();
         }
     }

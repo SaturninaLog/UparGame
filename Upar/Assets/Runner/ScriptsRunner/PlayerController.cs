@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
             {
                 verticalVelocity = jumpForce;
                 if (animator != null) animator.SetTrigger("Jump");
+                AudioManager.instance.PlayFX(AudioManager.instance.jumpFX); // ✅ sonido salto
             }
 
             if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -172,6 +173,8 @@ public class PlayerController : MonoBehaviour
         isDead = true;
 
         if (animator != null) animator.SetTrigger("Die");
+
+        AudioManager.instance.PlayFX(AudioManager.instance.playerDeathFX); // ✅ sonido de perder
 
         if (gameOverPanel != null)
         {
