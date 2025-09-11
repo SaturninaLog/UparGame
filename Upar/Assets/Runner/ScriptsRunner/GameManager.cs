@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     public int piecesNeeded = 3;
 
     [Header("Nivel / Progreso")]
-    public int coinsToNextLevel = 50;     // ← monedas necesarias para avanzar
-    public string nextLevelName;          // ← nombre de la siguiente escena
+    public int coinsToNextLevel = 50;
+    public string nextLevelName;
 
     [Header("UI Referencias")]
     public TMP_Text coinText;
@@ -24,21 +24,22 @@ public class GameManager : MonoBehaviour
     [Header("Souvenir UI")]
     public List<Image> souvenirImageDisplays;
     public List<Sprite> souvenirSprites;
+    public Sprite souvenirLockedSprite;   // 🔥 sprite inicial (vacío/bloqueado)
     private int souvenirsCollected = 0;
 
     [Header("Multiplicador")]
-    public int baseCoinValue = 1;           // Valor base por moneda
-    public float multiplierDuration = 5f;   // Cuánto dura el multiplicador
+    public int baseCoinValue = 1;
+    public float multiplierDuration = 5f;
     private int currentMultiplier = 1;
     private float multiplierTimer = 0f;
 
     [Header("UI Multiplicador")]
-    public TMP_Text multiplierText;         // Asigna en el inspector
+    public TMP_Text multiplierText;
 
     public GroundManager groundManager;
 
     [Header("Fade")]
-    public ScreenFader screenFader;         // ← Asigna en el inspector (el panel de fade con el script ScreenFader)
+    public ScreenFader screenFader;
 
     void Awake()
     {
@@ -56,15 +57,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SetupUIReferences();
+        ClearSouvenirsUI();   // 🟢 limpiar souvenirs al inicio
         UpdateUI();
         if (itemImage != null)
             itemImage.enabled = false;
-
-        foreach (var display in souvenirImageDisplays)
-            if (display != null)
-                display.gameObject.SetActive(false);
-
-        souvenirsCollected = 0;
 
         UpdateMultiplierUI();
     }
@@ -87,14 +84,7 @@ public class GameManager : MonoBehaviour
     {
         if (multiplierText != null)
         {
-            if (currentMultiplier > 1)
-            {
-                multiplierText.text = $"Monedas x{currentMultiplier} ({multiplierTimer:F1}s)";
-            }
-            else
-            {
-                multiplierText.text = "";
-            }
+            multiplierText.text = currentMultiplier > 1 ? $"x{currentMultiplier}" : "";
         }
     }
 
@@ -115,6 +105,15 @@ public class GameManager : MonoBehaviour
         currentMultiplier = 1;
         multiplierTimer = 0f;
 
+        SetupUIReferences();
+        ClearSouvenirsUI();   // 🟢 limpiar souvenirs siempre al cargar escena
+        UpdateUI();
+        UpdateMultiplierUI();
+    }
+
+    // 🟢 Método centralizado para buscar la UI en cada escena
+    private void SetupUIReferences()
+    {
         GameObject coinTextObject = GameObject.Find("CoinText");
         if (coinTextObject != null)
             coinText = coinTextObject.GetComponent<TMP_Text>();
@@ -127,8 +126,34 @@ public class GameManager : MonoBehaviour
         if (multTextObj != null)
             multiplierText = multTextObj.GetComponent<TMP_Text>();
 
-        UpdateUI();
-        UpdateMultiplierUI();
+        GameObject itemImageObj = GameObject.Find("ItemImage");
+        if (itemImageObj != null)
+            itemImage = itemImageObj.GetComponent<Image>();
+    }
+
+    // 🟢 función mejorada para limpiar souvenirs
+    private void ClearSouvenirsUI()
+    {
+        souvenirsCollected = 0;
+
+        if (souvenirImageDisplays == null)
+            souvenirImageDisplays = new List<Image>();
+
+        souvenirImageDisplays.Clear();
+        for (int i = 0; i < souvenirSprites.Count; i++)
+        {
+            GameObject obj = GameObject.Find("Souvenir" + (i + 1));
+            if (obj != null)
+            {
+                Image img = obj.GetComponent<Image>();
+                // 🔥 en vez de null, le ponemos el sprite inicial bloqueado
+                img.sprite = souvenirLockedSprite;
+                img.gameObject.SetActive(true);
+                souvenirImageDisplays.Add(img);
+            }
+        }
+
+        Debug.Log("[GameManager] Souvenirs reseteados en la escena");
     }
 
     public void AddCoin(int amount)
@@ -137,7 +162,6 @@ public class GameManager : MonoBehaviour
         coins += finalAmount;
         UpdateUI();
 
-        // 🟢 Verifica si ya alcanzó las monedas para pasar de nivel
         if (coins >= coinsToNextLevel)
         {
             GoToNextLevel();
@@ -188,9 +212,9 @@ public class GameManager : MonoBehaviour
     private void UpdateUI()
     {
         if (coinText != null)
-            coinText.text = $"Coins: {coins}";
+            coinText.text = $"{coins}";
         if (pieceText != null)
-            pieceText.text = $"Pieces: {itemPieces}/{piecesNeeded}";
+            pieceText.text = $"Piezas: {itemPieces}/{piecesNeeded}";
     }
 
     public void ResetScore()
@@ -198,6 +222,7 @@ public class GameManager : MonoBehaviour
         coins = 0;
         currentMultiplier = 1;
         multiplierTimer = 0f;
+        ClearSouvenirsUI();   // 🟢 limpiar souvenirs al reiniciar
         UpdateUI();
         UpdateMultiplierUI();
     }
@@ -207,10 +232,10 @@ public class GameManager : MonoBehaviour
         coins = 0;
         currentMultiplier = 1;
         multiplierTimer = 0f;
+        ClearSouvenirsUI();   // 🟢 limpiar souvenirs también aquí
         UpdateUI();
     }
 
-    // 🟢 Nuevo método para cambiar de nivel con fade
     private void GoToNextLevel()
     {
         Debug.Log("¡Monedas suficientes! Cargando siguiente nivel...");
@@ -225,7 +250,6 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                // Si no hay fader, carga directo
                 SceneManager.LoadScene(nextLevelName);
             }
         }

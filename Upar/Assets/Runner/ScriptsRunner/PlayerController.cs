@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
             if (gameOverText != null)
-                gameOverText.text = "☠️ Game Over";
+                gameOverText.text = "Has Perdido";
         }
 
         Time.timeScale = 0f;

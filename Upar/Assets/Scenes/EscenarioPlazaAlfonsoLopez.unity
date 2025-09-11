@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 8bfce44240b80f6498852a43975cac4e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8cd45e9d099db2b4494f26af18cfb7b9, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -186,6 +186,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cd095fa6a5ff3ba409c344ea3ad5b890, type: 3}
       propertyPath: m_Name
       value: Casa_Alcaldia_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd095fa6a5ff3ba409c344ea3ad5b890, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -443,6 +447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -515,6 +523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -586,6 +598,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d15781821ec29804999c54cd80430d0d, type: 3}
       propertyPath: m_Name
       value: Bandera_Colombia
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d15781821ec29804999c54cd80430d0d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -728,6 +744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -860,6 +880,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1035,6 +1059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Domo_Eventos01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 177501b5aad427542861115696b55561, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1112,6 +1140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bake_Monumento01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b6b3f3dda2291024f94b5f1016d2e961, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1183,6 +1215,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1256,6 +1292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1324,6 +1364,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1394,6 +1438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1462,6 +1510,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1535,6 +1587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1603,6 +1659,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1740,6 +1800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bake_casa_01_P6 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1843,6 +1907,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1948,6 +2016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2025,6 +2097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2097,6 +2173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2165,6 +2245,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2267,6 +2351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2335,6 +2423,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2439,6 +2531,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2617,6 +2713,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2829,6 +2929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2905,6 +3009,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
       propertyPath: m_Name
       value: Maceta_bake_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2983,6 +3091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3051,6 +3163,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3161,6 +3277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bake_casa_01_P6 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3269,6 +3389,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3446,6 +3570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bake_casa_01_P6 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3587,6 +3715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3640,7 +3772,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!154 &491795908
 TerrainCollider:
@@ -3709,12 +3841,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491795907}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -36.3, y: 0, z: -104.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2061152948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &500326292
 PrefabInstance:
@@ -3779,6 +3911,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
       propertyPath: m_Name
       value: Maceta_bake_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3857,6 +3993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3929,6 +4069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3998,6 +4142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4066,6 +4214,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4171,6 +4323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4239,6 +4395,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4418,6 +4578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4489,6 +4653,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4658,6 +4826,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4774,6 +4946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4842,6 +5018,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4914,6 +5094,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4989,6 +5173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5060,6 +5248,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5304,6 +5496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5404,6 +5600,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5519,6 +5719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5633,6 +5837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5704,6 +5912,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5777,6 +5989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5848,6 +6064,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5955,6 +6175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6001,7 +6225,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.427
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -6050,13 +6274,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822989684}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.40771133, y: -0.23422657, z: 0.10655501, w: 0.87610245}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 49.846, y: -30.113, z: -0.381}
 --- !u!1 &823634473
 GameObject:
   m_ObjectHideFlags: 0
@@ -6223,6 +6447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6291,6 +6519,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6424,6 +6656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casa_Alcaldia_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd095fa6a5ff3ba409c344ea3ad5b890, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6528,6 +6764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6596,6 +6836,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6669,6 +6913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6741,6 +6989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6809,6 +7061,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6887,6 +7143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6956,6 +7216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7024,6 +7288,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7125,6 +7393,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7267,6 +7539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7371,6 +7647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7442,6 +7722,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
       propertyPath: m_Name
       value: Maceta_bake_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7515,6 +7799,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7583,6 +7871,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7658,6 +7950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bake_casa_01_P6 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7730,6 +8026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7798,6 +8098,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7870,6 +8174,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8080,6 +8388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8153,6 +8465,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8263,6 +8579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8334,6 +8654,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8473,6 +8797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8541,6 +8869,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8646,6 +8978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandera_Valledupar
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8370a58ed35cded4c99d4da186acdb84, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8717,6 +9053,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8822,6 +9162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8893,6 +9237,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9134,6 +9482,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9552,6 +9904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bake_casa_01_P6 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9624,6 +9980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9695,6 +10055,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9807,6 +10171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9875,6 +10243,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9947,6 +10319,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10048,6 +10424,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10205,6 +10585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10309,6 +10693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10409,6 +10797,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10551,6 +10943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10623,6 +11019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10691,6 +11091,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10764,6 +11168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10832,6 +11240,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10936,6 +11348,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11263,6 +11679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bake_casa_01_P6 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11334,6 +11754,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 177501b5aad427542861115696b55561, type: 3}
       propertyPath: m_Name
       value: Domo_Eventos01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 177501b5aad427542861115696b55561, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11449,6 +11873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11521,6 +11949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11592,6 +12024,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11738,6 +12174,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11977,6 +12417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12049,6 +12493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12073,7 +12521,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!154 &1628643905
 TerrainCollider:
@@ -12213,6 +12661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12314,6 +12766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12382,6 +12838,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12486,6 +12946,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12596,6 +13060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12700,6 +13168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12768,6 +13240,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12870,6 +13346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12939,6 +13419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13007,6 +13491,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13080,6 +13568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13149,6 +13641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13217,6 +13713,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13321,6 +13821,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13470,6 +13974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13573,6 +14081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13645,6 +14157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13713,6 +14229,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
       propertyPath: m_Name
       value: Maceta_bake_01 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13891,6 +14411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14002,6 +14526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14073,6 +14601,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14217,6 +14749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14350,6 +14886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14454,6 +14994,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14525,6 +15069,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14659,6 +15207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14715,7 +15267,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!154 &1911250312
 TerrainCollider:
@@ -14784,12 +15336,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911250311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 33.7, y: 0, z: -104.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2061152948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1920137093
 PrefabInstance:
@@ -14854,6 +15406,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14928,6 +15484,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15106,6 +15666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15174,6 +15738,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8b1562cdb01806645af69bc449ad192c, type: 3}
       propertyPath: m_Name
       value: Casa_Alta01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b1562cdb01806645af69bc449ad192c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15311,6 +15879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15384,6 +15956,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
       propertyPath: m_Name
       value: Arbol_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15526,6 +16102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 419b61eac22bf554d929cfcd69737b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15667,6 +16247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15735,6 +16319,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bfc19b9a9f40ae64fb84f05a2368039a, type: 3}
       propertyPath: m_Name
       value: Bandera_blancoy_verde
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfc19b9a9f40ae64fb84f05a2368039a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15808,6 +16396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15880,6 +16472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15948,6 +16544,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16031,6 +16631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16107,6 +16711,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16314,6 +16922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16385,6 +16997,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16694,6 +17310,8 @@ Transform:
   - {fileID: 1261961846}
   - {fileID: 3804102}
   - {fileID: 1628643907}
+  - {fileID: 491795910}
+  - {fileID: 1911250314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2065062939
@@ -16759,6 +17377,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
       propertyPath: m_Name
       value: Bake_casa_01_P6 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86e9bc2a0c638948b92029c11c8b25d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16831,6 +17453,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
       propertyPath: m_Name
       value: Arbusto_bake02 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17038,6 +17664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto_bake02 (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be3f4a739b39b184caa9e4d91919746d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17106,6 +17736,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8b1562cdb01806645af69bc449ad192c, type: 3}
       propertyPath: m_Name
       value: Casa_Alta01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b1562cdb01806645af69bc449ad192c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17216,6 +17850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta_bake_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17288,6 +17926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casa_Alcaldia_02
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1e1435787d19ba4fa0e475519318eae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17359,6 +18001,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
       propertyPath: m_Name
       value: Maceta_bake_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2aef0d68c2a581498ec126217f1497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18903,5 +19549,3 @@ SceneRoots:
   - {fileID: 6325915585553905512}
   - {fileID: 892565877}
   - {fileID: 2061152948}
-  - {fileID: 491795910}
-  - {fileID: 1911250314}
