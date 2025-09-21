@@ -13,12 +13,14 @@ public class SceneLoader : MonoBehaviour
     // Recibe un panel (GameObject) y lo activa
     public void OpenPanel(GameObject panel)
     {
+        AudioManager.instance.PlayFX(AudioManager.instance.selectButtonFX);
         panel.SetActive(true);
     }
 
     // Recibe un panel (GameObject) y lo desactiva
     public void ClosePanel(GameObject panel)
     {
+        AudioManager.instance.PlayFX(AudioManager.instance.selectButtonFX);
         panel.SetActive(false);
     }
 

@@ -11,6 +11,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player") && !activated)
         {
+            AudioManager.instance.PlayFX(AudioManager.instance.CheckpointFX);
             activated = true;
 
             // ✅ Guardamos la posición en el manager

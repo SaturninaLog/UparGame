@@ -6,6 +6,7 @@ public class CollectibleItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.PlayFX(AudioManager.instance.RecolectarSouvenirFX);
             CollectibleUIManager.instance.AddCollectible();
             Destroy(gameObject); // Destruye el objeto al recogerlo
         }

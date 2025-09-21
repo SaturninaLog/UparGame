@@ -47,7 +47,7 @@ public class StartGame : MonoBehaviour
     {
 
         // Sonido de seleccionar botón
-        AudioManager.instance.PlayFX(AudioManager.instance.selectButtonFX);
+        AudioManager.instance.PlayFX(AudioManager.instance.BotonPlayFX);
 
         Debug.Log("Botón presionado → Activando animación Run");
         if (childAnimator != null)
