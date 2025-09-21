@@ -294,8 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piecesNeeded: 3
-  coinsToNextLevel: 50
-  nextLevelName: EscenarioPlazaAlfonsoLopez
+  coinsToNextLevel: 25
+  nextLevelName: PlataformeoAlfonzoLopez
   coinText: {fileID: 2553435114744540281}
   pieceText: {fileID: 6959540749229053650}
   itemImage: {fileID: 2603280323527400317, guid: d94a82e0e1cbda54aa3f296f13bb00fa, type: 3}

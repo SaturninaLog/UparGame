@@ -89,11 +89,18 @@ public class PlayerController : MonoBehaviour
         {
             verticalVelocity = -1;
 
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                verticalVelocity = jumpForce;
+                if (animator != null) animator.SetTrigger("Jump");
+   
+            }
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 verticalVelocity = jumpForce;
                 if (animator != null) animator.SetTrigger("Jump");
-                AudioManager.instance.PlayFX(AudioManager.instance.jumpFX); // ✅ sonido salto
+
             }
 
             if (Input.GetKeyDown(KeyCode.DownArrow))

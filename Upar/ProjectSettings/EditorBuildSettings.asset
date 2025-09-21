@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenarioPlazaAlfonsoLopez.unity
     guid: 1b8b8430c33864a4ea8b6d7fc21bda36
+  - enabled: 1
+    path: Assets/Scenes/PlataformeoAlfonzoLopez.unity
+    guid: 8be6324efaff0c344a71a32259739cf1
   m_configObjects: {}
