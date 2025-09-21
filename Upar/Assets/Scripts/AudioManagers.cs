@@ -22,6 +22,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip coinCollectedFX;
     public AudioClip playerDeathFX;
     public AudioClip pauseButtonFX;
+    public AudioClip caidaPlayerFX;
+    public AudioClip BotonPlayFX;
+    public AudioClip CheckpointFX;
+    public AudioClip MonedaCollectedFX;
+    public AudioClip RecolectarSouvenirFX;
 
     [Range(0f, 1f)]
     public float musicVolume = 1f;
@@ -74,6 +79,20 @@ public class AudioManager : MonoBehaviour
 
         // Reproducir música correspondiente a la escena
         PlayMusicForScene(scene.name);
+
+        // 🔹 Tu código actual de asignar musicSource / fxSource
+        PlayMusicForScene(scene.name);
+
+        // 🔹 Sincronizar sliders si hay un SettingsMenu en la escena
+        SettingsMenu settings = FindObjectOfType<SettingsMenu>();
+        if (settings != null)
+        {
+            if (settings.musicSlider != null)
+                settings.musicSlider.value = musicVolume;
+
+            if (settings.fxSlider != null)
+                settings.fxSlider.value = fxVolume;
+        }
     }
 
     private void PlayMusicForScene(string sceneName)
@@ -129,4 +148,6 @@ public class AudioManager : MonoBehaviour
     {
         fxVolume = Mathf.Clamp01(volume);
     }
+
+
 }

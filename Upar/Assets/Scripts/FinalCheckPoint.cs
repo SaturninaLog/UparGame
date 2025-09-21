@@ -10,6 +10,7 @@ public class FinalCheckpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.PlayFX(AudioManager.instance.coinCollectedFX);
             Debug.Log("¡Has llegado al final del nivel!");
 
             // 🔹 Llamamos al Fade antes de cargar la escena

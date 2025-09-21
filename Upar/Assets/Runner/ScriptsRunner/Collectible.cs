@@ -9,6 +9,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.PlayFX(AudioManager.instance.MonedaCollectedFX);
             if (type == CollectibleType.Coin)
                 GameManager.instance.AddCoin(1);
             else if (type == CollectibleType.ItemPiece)
