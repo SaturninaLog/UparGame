@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.51308525, g: 0.52315295, b: 0.55554354, a: 1}
+  m_IndirectSpecularColor: {r: 0.51340914, g: 0.5243371, b: 0.5564188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1901,7 +1901,6 @@ GameObject:
   - component: {fileID: 1589325614}
   - component: {fileID: 1589325613}
   - component: {fileID: 1589325618}
-  - component: {fileID: 1589325619}
   m_Layer: 0
   m_Name: Sergio
   m_TagString: Player
@@ -1936,6 +1935,8 @@ MonoBehaviour:
   gameOverText: {fileID: 1636572235}
   restartButton: {fileID: 1861520196}
   animator: {fileID: 4092345338412573890}
+  useMobileControls: 1
+  minSwipeDistance: 100
 --- !u!136 &1589325614
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2045,33 +2046,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1589325619
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589325612}
-  serializedVersion: 4
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1636572235 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2398823956017698659, guid: 707bf344878164347969f3375cad46f0, type: 3}

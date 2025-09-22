@@ -994,7 +994,7 @@ MonoBehaviour:
   childAnimator: {fileID: 3309870542653805337}
   childTransform: {fileID: 8867351736727439715}
   runSpeed: 4
-  nextScene: Center
+  nextScene: Controles
   fadeImage: {fileID: 640492801}
   fadeDuration: 2
 --- !u!1 &203954743
