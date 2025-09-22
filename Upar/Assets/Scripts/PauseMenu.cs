@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        AudioManager.instance.PlayFX(AudioManager.instance.pauseButtonFX);
         pausePanel.SetActive(false); // Oculta el panel
         Time.timeScale = 1f;         // Reanuda el juego
         isPaused = false;
@@ -35,12 +36,14 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartGame()
     {
+        AudioManager.instance.PlayFX(AudioManager.instance.pauseButtonFX);
         Time.timeScale = 1f; // Asegura que vuelva a la normalidad
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void QuitToMenu()
     {
+        AudioManager.instance.PlayFX(AudioManager.instance.pauseButtonFX);
         Time.timeScale = 1f; // Restablece el tiempo
         SceneManager.LoadScene("MenuInicio"); // 👈 Cambia "Menu" por el nombre real de tu escena de inicio
     }

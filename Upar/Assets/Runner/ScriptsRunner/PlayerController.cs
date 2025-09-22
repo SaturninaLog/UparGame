@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 originalCenter;
     private bool isSliding = false;
     private float slideTimer = 0f;
-    [SerializeField] private float slideYOffset = 0f; // ajusta en el inspector
+    [SerializeField] private float slideYOffset = 0f;
 
     [Header("UI Game Over")]
     public GameObject gameOverPanel;
@@ -36,7 +36,13 @@ public class PlayerController : MonoBehaviour
     public Button restartButton;
 
     [Header("Animaciones")]
-    public Animator animator;  // Referencia al Animator
+    public Animator animator;
+
+    [Header("Mobile Controls")]
+    public bool useMobileControls = true;
+    private Vector2 startTouch;
+    private bool isSwiping = false;
+    public float minSwipeDistance = 100f; // px
 
     void Start()
     {
@@ -53,59 +59,71 @@ public class PlayerController : MonoBehaviour
             restartButton.onClick.AddListener(RestartScene);
         }
 
-        if (animator == null) // si no se asignó en el inspector
+        if (animator == null)
             animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
-        // ❌ Si el jugador está muerto o congelado, no hace nada
         if (isDead || (GameManager.instance != null && GameManager.instance.playerFrozen))
         {
-            if (animator != null)
-            {
-                animator.SetBool("Running", false);
-            }
+            if (animator != null) animator.SetBool("Running", false);
             return;
         }
 
-        // Movimiento hacia adelante
+        // Aumentar velocidad con el tiempo
         if (forwardSpeed < maxSpeed)
             forwardSpeed += speedIncreaseRate * Time.deltaTime;
 
         moveDirection = Vector3.forward * forwardSpeed;
 
-        // Cambio de carril
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-            currentLane = Mathf.Max(0, currentLane - 1);
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-            currentLane = Mathf.Min(2, currentLane + 1);
+        // ✅ Entradas
+        HandleInput();
 
+        // Slide activo
+        if (isSliding)
+        {
+            slideTimer -= Time.deltaTime;
+            if (slideTimer <= 0f)
+                EndSlide();
+        }
+
+        // Movimiento vertical
+        moveDirection.y = verticalVelocity;
+        controller.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void HandleInput()
+    {
+        // --- Cambiar carril (PC o móvil)
+        if (!useMobileControls)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow)) currentLane = Mathf.Max(0, currentLane - 1);
+            if (Input.GetKeyDown(KeyCode.RightArrow)) currentLane = Mathf.Min(2, currentLane + 1);
+        }
+        else
+        {
+            DetectSwipe();
+        }
+
+        // --- Movimiento en X
         float targetX = (currentLane - 1) * laneDistance;
         moveDirection.x = (targetX - transform.position.x) * 10f;
 
-        // Saltar
+        // --- Saltar / Slide
         if (controller.isGrounded)
         {
-            verticalVelocity = -1;
+            // 👇 Solo resetear si no se está aplicando salto
+            if (verticalVelocity < 0f)
+                verticalVelocity = -1;
 
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (!useMobileControls)
             {
-                verticalVelocity = jumpForce;
-                if (animator != null) animator.SetTrigger("Jump");
-   
-            }
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
+                    Jump();
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                verticalVelocity = jumpForce;
-                if (animator != null) animator.SetTrigger("Jump");
-
-            }
-
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                StartSlide();
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                    StartSlide();
             }
 
             if (!isSliding && animator != null)
@@ -113,6 +131,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            // Gravedad
             if (Input.GetKey(KeyCode.DownArrow))
                 verticalVelocity -= gravity * fastFallMultiplier * Time.deltaTime;
             else
@@ -121,22 +140,66 @@ public class PlayerController : MonoBehaviour
             if (animator != null)
                 animator.SetBool("Running", false);
         }
+    }
 
-        // Slide
-        if (isSliding)
+    private void DetectSwipe()
+    {
+        if (Input.touchCount == 0) return;
+
+        Touch t = Input.GetTouch(0);
+
+        if (t.phase == TouchPhase.Began)
         {
-            slideTimer -= Time.deltaTime;
-            if (slideTimer <= 0f)
-                EndSlide();
+            startTouch = t.position;
+            isSwiping = true;
         }
+        else if (t.phase == TouchPhase.Ended && isSwiping)
+        {
+            Vector2 swipeDelta = t.position - startTouch;
+            isSwiping = false;
 
-        moveDirection.y = verticalVelocity;
-        controller.Move(moveDirection * Time.deltaTime);
+            if (swipeDelta.magnitude < minSwipeDistance) return;
+
+            swipeDelta.Normalize();
+
+            // Determinar dirección del swipe
+            if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
+            {
+                // Horizontal
+                if (swipeDelta.x > 0) currentLane = Mathf.Min(2, currentLane + 1); // derecha
+                else currentLane = Mathf.Max(0, currentLane - 1); // izquierda
+            }
+            else
+            {
+                // Vertical
+                if (swipeDelta.y > 0)
+                {
+                    Debug.Log("📱 Swipe detectado: ARRIBA -> Saltar");
+                    Jump();
+                }
+                else
+                {
+                    Debug.Log("📱 Swipe detectado: ABAJO -> Slide");
+                    StartSlide();
+                }
+            }
+        }
+    }
+
+    private void Jump()
+    {
+        if (controller.isGrounded)
+        {
+            verticalVelocity = jumpForce;
+            Debug.Log("🚀 Jump ejecutado con fuerza: " + jumpForce);
+
+            if (animator != null) animator.SetTrigger("Jump");
+        }
     }
 
     private void StartSlide()
     {
-        if (isSliding) return;
+        if (isSliding || !controller.isGrounded) return;
 
         isSliding = true;
         slideTimer = slideDuration;
@@ -162,10 +225,7 @@ public class PlayerController : MonoBehaviour
         controller.height = originalHeight;
         controller.center = originalCenter;
 
-        if (animator != null)
-        {
-            animator.SetBool("Running", true);
-        }
+        if (animator != null) animator.SetBool("Running", true);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -181,7 +241,7 @@ public class PlayerController : MonoBehaviour
 
         if (animator != null) animator.SetTrigger("Die");
 
-        AudioManager.instance.PlayFX(AudioManager.instance.playerDeathFX); // ✅ sonido de perder
+        AudioManager.instance.PlayFX(AudioManager.instance.playerDeathFX);
 
         if (gameOverPanel != null)
         {

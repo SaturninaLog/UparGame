@@ -788,6 +788,7 @@ GameObject:
   - component: {fileID: 2523701483003520540}
   - component: {fileID: 6711145710926588626}
   - component: {fileID: 849610204683374937}
+  - component: {fileID: 1467834143192233299}
   m_Layer: 0
   m_Name: Sergio
   m_TagString: Player
@@ -852,6 +853,15 @@ MonoBehaviour:
   turnSmoothSpeed: 10
   model: {fileID: 577688131003399627}
   animator: {fileID: 5796542665581627178}
+  groundCheck: {fileID: 0}
+  groundDistance: 0.15
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  coyoteTime: 0.12
+  plataformaStickTimeout: 0.2
+  joystick: {fileID: 0}
+  useMobileControls: 1
 --- !u!143 &849610204683374937
 CharacterController:
   m_ObjectHideFlags: 0
@@ -878,6 +888,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1467834143192233299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675577933973872917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d3ed3490e6314468fcbe5148fce99e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSwipeDistance: 50
+  maxSwipeTime: 1
 --- !u!1 &5697689005951902207
 GameObject:
   m_ObjectHideFlags: 0

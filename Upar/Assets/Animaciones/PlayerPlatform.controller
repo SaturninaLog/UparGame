@@ -148,13 +148,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: IsJumping
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -213,9 +213,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.06637162
-  m_TransitionOffset: 0.17770505
-  m_ExitTime: 0.93074256
+  m_TransitionDuration: 0.043015063
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9546975
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -266,9 +266,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.095131874
-  m_TransitionOffset: 0.06423003
-  m_ExitTime: 0.9904229
+  m_TransitionDuration: 0.45000648
+  m_TransitionOffset: 0
+  m_ExitTime: 0.95469755
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
