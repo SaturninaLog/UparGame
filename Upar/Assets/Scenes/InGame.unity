@@ -1935,7 +1935,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1636572235}
   restartButton: {fileID: 1861520196}
   animator: {fileID: 4092345338412573890}
-  useMobileControls: 1
+  useMobileControls: 0
   minSwipeDistance: 100
 --- !u!136 &1589325614
 CapsuleCollider:
