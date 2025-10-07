@@ -6,6 +6,7 @@ public class SceneLoader : MonoBehaviour
     // --- Para cargar escenas ---
     public void LoadScene(string sceneName)
     {
+        AudioManager.instance.PlayFX(AudioManager.instance.selectButtonFX);
         SceneManager.LoadScene(sceneName);
     }
 
